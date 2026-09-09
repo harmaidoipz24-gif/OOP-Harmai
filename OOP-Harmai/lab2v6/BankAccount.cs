@@ -4,12 +4,11 @@ namespace Lab2App
 {
     public class BankAccount
     {
-        // Приватні поля
+    
         private string _owner;
         private string _accountNumber;
         private decimal _balance;
 
-        // Властивості
         public string Owner
         {
             get => _owner;
@@ -21,11 +20,10 @@ namespace Lab2App
             }
         }
 
-        // Властивості лише для читання
+        
         public string AccountNumber => _accountNumber;
         public decimal Balance => _balance;
 
-        // 1. Повний конструктор із параметрами
         public BankAccount(string owner, string accountNumber, decimal initialBalance)
         {
             if (initialBalance < 0)
@@ -38,14 +36,12 @@ namespace Lab2App
             Console.WriteLine($"[Конструктор] Створено рахунок {accountNumber} для {owner} з балансом {initialBalance} UAH.");
         }
 
-        // 2. Перевантажений конструктор (викликає перший через : this)
         public BankAccount(string owner, string accountNumber) 
             : this(owner, accountNumber, 0m)
         {
             Console.WriteLine($"[Конструктор] Викликано перевантажений конструктор (баланс за замовчуванням 0 UAH).");
         }
 
-        // Метод поповнення
         public void Deposit(decimal amount)
         {
             if (amount <= 0)
@@ -58,7 +54,7 @@ namespace Lab2App
             Console.WriteLine($"[Deposit] {Owner} поповнив(-ла) рахунок на {amount} UAH. Баланс: {_balance} UAH.");
         }
 
-        // Метод зняття коштів з валідацією
+
         public bool Withdraw(decimal amount)
         {
             if (amount <= 0)
@@ -78,7 +74,6 @@ namespace Lab2App
             return true;
         }
 
-        // Деструктор (Фіналізатор)
         ~BankAccount()
         {
             Console.WriteLine($"[Деструктор] Об'єкт рахунку {AccountNumber} ({Owner}) знищено збирачем сміття.");
