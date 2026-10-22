@@ -3,8 +3,6 @@ using System.Text;
 
 namespace IndependentWork2;
 
-// Самостійна робота №2. Перевантаження конструкторів: приклади та сценарії.
-
 public class Product
 {
     // Приватні поля

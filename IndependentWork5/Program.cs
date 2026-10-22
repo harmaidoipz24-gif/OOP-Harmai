@@ -3,11 +3,6 @@ using System.Text;
 
 namespace IndependentWork5;
 
-// Самостійна робота №5. Приклади поліморфізму в .NET.
-// Детальний звіт — у файлі REPORT.md; короткі висновки — у коментарях після кожного сценарію.
-
-// Сценарій 1: System.Object.ToString()
-
 public class Product
 {
     public string Name { get; }
