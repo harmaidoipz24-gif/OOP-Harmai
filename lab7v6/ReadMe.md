@@ -18,9 +18,9 @@
   * `InMemoryRepository<T>` — узагальнена реалізація репозиторію в пам'яті.
 * **`lab12v6.Tests`** — xUnit тестовий проєкт:
   * Покриває 100% методів `InMemoryRepository<T>` (`Add`, `GetById`, `GetAll`, `Update`, `Delete`), перевіряючи позитивні сценарії та обробку виняткових ситуацій (неіснуючі ID, дублікати, `null`).
+  ![alt text](image.png)
 
 ##  Запуск тестів
 ```bash
 cd lab12v6.Tests
 dotnet test
-![alt text](image.png)
