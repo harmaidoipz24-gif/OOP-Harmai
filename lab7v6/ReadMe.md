@@ -23,3 +23,4 @@
 ```bash
 cd lab12v6.Tests
 dotnet test
+![alt text](image.png)
